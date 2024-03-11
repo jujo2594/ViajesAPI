@@ -10,7 +10,6 @@ namespace Core.Interfaces
 {
     public interface ITransport : IGenericRepository<Transport>
     {
-        //Task<JArray> GetJsonFromApi();
-        //Task SaveTransport();
+
     }
 }

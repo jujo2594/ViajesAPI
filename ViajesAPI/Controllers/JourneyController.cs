@@ -93,11 +93,8 @@ namespace ViajesAPI.Controllers;
             {
                 return BadRequest();
             }
-            // Update the properties of the existing entity with values from auditoriaDto
             _mapper.Map(resultDto, result);
-            // The context is already tracking result, so no need to attach it
             await _unitOfWork.SaveAsync();
-            // Return the updated entity
             return _mapper.Map<JourneyDto>(result);
         }
 
