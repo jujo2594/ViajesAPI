@@ -51,9 +51,9 @@ namespace ViajesAPI.Controllers;
         public async Task<ActionResult<IEnumerable<Object>>> GetStepsInTrip(string origin, string destination)
         {
             var result = await _unitOfWork.Journeys.GetStepsInTrip(origin, destination);
-            if (result == null)
+            if (result.Count() == 0)
             {
-                return NotFound();
+                return NotFound("Lo sentimos no tenemos una ruta disponible");
             }
             return _mapper.Map<List<Object>>(result);
         }
