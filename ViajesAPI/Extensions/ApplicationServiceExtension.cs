@@ -34,7 +34,6 @@ namespace ViajesAPI.Extensions
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
-
         public static void ConfigureRateLimiting(this IServiceCollection services)
         {
             services.AddMemoryCache();

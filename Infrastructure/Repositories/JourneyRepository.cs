@@ -103,7 +103,6 @@ namespace Infrastructure.Repositories
                     steps.Add(connectingStep);
                 }
             }
-            //await SaveQuery(steps);
             return steps;
         }
 
